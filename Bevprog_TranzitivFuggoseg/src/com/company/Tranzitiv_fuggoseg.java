@@ -23,3 +23,13 @@ public class Tranzitiv_fuggoseg {
         System.out.println(fuggesek.getFuggosegek());
     }
 
+    public boolean Mapfeltolto(String beirtfuggoseg) {
+        String[] StringElvalaszto = beirtfuggoseg.split(" ");
+        String key = StringElvalaszto[0];
+        HashSet<String> fuggosegek = new HashSet<>();
+        for (int i = 1; i < StringElvalaszto.length; i++) {
+            fuggosegek.add(StringElvalaszto[i]);
+        }
+        return alapfuggoseg.put(key, fuggosegek) != null;
+    }
+
